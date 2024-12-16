@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
     <style>
-       body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -26,14 +26,15 @@
             scroll-snap-align: start;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             padding: 20px;
             box-sizing: border-box;
+            overflow-y: auto;
         }
         .page h1 {
-            margin-bottom: 10px;
+            margin: 20px 0;
             text-align: center;
+            color: #333;
         }
 
         header {
@@ -41,13 +42,20 @@
             color: white;
             text-align: center;
             padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
+
         .slider {
             display: flex;
             overflow: hidden;
             position: relative;
             width: 100%;
             height: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .slides {
             display: flex;
@@ -76,9 +84,10 @@
             border-radius: 8px;
             overflow: hidden;
             text-align: left;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin: 1rem auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
             max-width: 600px;
+            width: 100%;
             padding: 10px;
         }
         .menu-item img {
@@ -90,7 +99,6 @@
         }
         .menu-item .details {
             flex: 2;
-            margin-right: 20px;
         }
         .menu-item .prices {
             flex: 1;
@@ -101,7 +109,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 5px 10px;
-            display: inline-block;
+            margin: 5px 0;
         }
 
         footer {
@@ -109,7 +117,8 @@
             color: white;
             text-align: center;
             padding: 1rem;
-            margin-top: 2rem;
+            position: sticky;
+            bottom: 0;
         }
     </style>
 </head>
@@ -145,14 +154,23 @@
         <div class="menu-item">
             <img src="lolipop.jpg" alt="Starter 1">
             <div class="details">
-                <h2>Chicken lolipop</h2>
-                <p>Description of the starter</p>
+                <h2>Chicken Lollipop</h2>
+                <p>Spicy fried chicken lollipop with a tangy sauce.</p>
             </div>
             <div class="prices">
                 <p>250/-</p>
             </div>
         </div>
-        <!-- Add more starters here -->
+        <div class="menu-item">
+            <img src="paneer_tikka.jpg" alt="Starter 2">
+            <div class="details">
+                <h2>Paneer Tikka</h2>
+                <p>Grilled cottage cheese with aromatic spices.</p>
+            </div>
+            <div class="prices">
+                <p>300/-</p>
+            </div>
+        </div>
     </div>
 
     <!-- Page 2: Main Course -->
@@ -162,16 +180,15 @@
             <img src="chicken mandi.jpg" alt="Main Course 1">
             <div class="details">
                 <h2>Chicken Mandi</h2>
-                <p>Description of the dish</p>
+                <p>Arabic-style rice and chicken, perfectly spiced.</p>
             </div>
             <div class="prices">
-                <p>Single:299/-</p>
+                <p>Single: 299/-</p>
                 <p>Couple: 399/-</p>
                 <p>Medium: 699/-</p>
                 <p>Large: 999/-</p>
             </div>
         </div>
-        <!-- Add more main course items here -->
     </div>
 
     <!-- Page 3: Drinks -->
@@ -181,29 +198,27 @@
             <img src="banana juice.jpg" alt="Drink 1">
             <div class="details">
                 <h2>Banana Juice</h2>
-                <p>Description of the drink</p>
+                <p>Freshly blended banana juice, served chilled.</p>
             </div>
             <div class="prices">
                 <p>100/-</p>
             </div>
         </div>
-        <!-- Add more drinks here -->
     </div>
 
     <!-- Page 4: Desserts -->
     <div class="page" style="background-color: #fff0f5;">
         <h1>Desserts & Ice Creams</h1>
         <div class="menu-item">
-            <img src="chocolate image.jpg" alt="Dessert 1">
+            <img src="chocolate_image.jpg" alt="Dessert 1">
             <div class="details">
-                <h2>Chocolate Ice Creame</h2>
-                <p>Description of the dessert</p>
+                <h2>Chocolate Ice Cream</h2>
+                <p>Rich and creamy chocolate ice cream.</p>
             </div>
             <div class="prices">
                 <p>150/-</p>
             </div>
         </div>
-        <!-- Add more desserts here -->
     </div>
 </div>
 
