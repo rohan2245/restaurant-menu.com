@@ -193,67 +193,31 @@
                 <p>250/-</p>
             </div>
         </div>
-        <div class="menu-item">
-            <img src="paneer_tikka.jpg" alt="Starter 2">
-            <div class="details">
-                <h2>Paneer Tikka</h2>
-                <p>Grilled cottage cheese with aromatic spices.</p>
-            </div>
-            <div class="prices">
-                <p>300/-</p>
-            </div>
-        </div>
     </div>
 
-    <!-- Page 2: Main Course -->
-    <div class="page" style="background-color: #fff8dc;">
-        <h1>Main Course</h1>
-        <div class="menu-item">
-            <img src="chicken mandi.jpg" alt="Main Course 1">
-            <div class="details">
-                <h2>Chicken Mandi</h2>
-                <p>Arabic-style rice and chicken, perfectly spiced.</p>
-            </div>
-            <div class="prices">
-                <p>Single: 299/-</p>
-                <p>Couple: 399/-</p>
-                <p>Medium: 699/-</p>
-                <p>Large: 999/-</p>
-            </div>
-        </div>
-    </div>
+    <!-- Add Main Course -->
+    <!-- Add Drinks -->
+    <!-- Add Desserts -->
 
-    <!-- Page 3: Drinks -->
-    <div class="page" style="background-color: #e6f7ff;">
-        <h1>Cool Drinks & Juices</h1>
-        <div class="menu-item">
-            <img src="banana juice.jpg" alt="Drink 1">
-            <div class="details">
-                <h2>Banana Juice</h2>
-                <p>Freshly blended banana juice, served chilled.</p>
-            </div>
-            <div class="prices">
-                <p>100/-</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page 4: Desserts -->
-    <div class="page" style="background-color: #fff0f5;">
-        <h1>Desserts & Ice Creams</h1>
-        <div class="menu-item">
-            <img src="chocolate_image.jpg" alt="Dessert 1">
-            <div class="details">
-                <h2>Chocolate Ice Cream</h2>
-                <p>Rich and creamy chocolate ice cream.</p>
-            </div>
-            <div class="prices">
-                <p>150/-</p>
-            </div>
-        </div>
-    </div>
 </div>
 
 <footer>
     <p>&copy; 2024 Your Restaurant Name | All Rights Reserved</p>
-    <p>Contact us: (555
+    <p>Contact us: (555) 123-4567</p>
+</footer>
+
+<script>
+    const pages = document.querySelectorAll('.page');
+    const navButtons = document.querySelector('.nav-buttons');
+    let currentPage = 0;
+
+    function showPage(index) {
+        document.querySelector('.book').style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.querySelectorAll('.nav-buttons button').forEach((btn, index) => {
+        btn.addEventListener('click', () => showPage(index));
+    });
+</script>
+</body>
+</html>
